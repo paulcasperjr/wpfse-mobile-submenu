@@ -1,0 +1,75 @@
+@media (max-width: 781px) {
+  .wp-block-navigation .wp-block-navigation__submenu-icon {
+    height: 1rem;
+    width: 1rem;
+    color: var(--wp--preset--color--primary);
+  }
+
+  /* Changes menu items width from full to auto */
+  .is-menu-open.has-modal-open .wp-block-navigation-item__content {
+    width: auto;
+  }
+
+  /* hide sub menu on modal open */
+  .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    .has-child
+    .wp-block-navigation__submenu-container {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  /* make sure this id matches your modal id - this sets the inner width of the menu*/
+  div#modal-1-content {
+    width: 80%;
+  }
+
+  /* resets padding-top on first item*/
+  div#modal-1-content .wp-block-navigation__container > li:first-child > a {
+    padding-top: var(--wp--preset--spacing--small) !important;
+  }
+  /*sets flex to the submenu item containing the submenu and icon*/
+  button.wp-block-navigation__submenu-icon.wp-block-navigation-submenu__toggle {
+    flex: 1;
+  }
+  /*spaces the parent nav and icon*/
+  li.wp-block-navigation-item.has-child.open-on-hover-click.wp-block-navigation-submenu {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* moves icon to the end of the row*/
+  .wp-block-navigation__responsive-container.is-menu-open
+    .wp-block-navigation__responsive-container-content
+    .wp-block-navigation__submenu-icon {
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+
+  /* Visible state for submenu */
+  .wp-block-navigation__submenu-container[aria-expanded="true"] {
+    visibility: visible;
+    position: relative;
+    opacity: 1;
+  }
+
+  /* Style the existing toggle icon */
+  .wp-block-navigation__submenu-icon {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  /* Rotate the SVG inside the toggle icon when the submenu is open */
+  .wp-block-navigation__submenu-icon[aria-expanded="true"] svg {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease; /* Smooth rotation */
+  }
+
+  /* Default state for the SVG */
+  .wp-block-navigation__submenu-icon svg {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease; /* Smooth rotation */
+  }
+}
