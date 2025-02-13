@@ -1,12 +1,15 @@
-# wpfse-mobile-submenu
-Adds some Vanilla JS and CSS to the mobile navigation in the Wordpress navigation block to allow dropdowns for submenu.
+# WP FSE Mobile Submenu
 
-Some things to note:
-You may need to adjust the ID on the navigation modal in the CSS file. 
+WP FSE Mobile Submenu enhances the WordPress Full Site Editing (FSE) experience by adding Vanilla JS and CSS to enable dropdown functionality for submenu items in the mobile navigation block.
 
-By default, the first navigation you use in FSE is #modal-1-content, so in most cases it should work out of the box.
-If you use multiple navigations (or created one and then deleted it and added another) you will need to target the one you want to use. ex. #modal-2-content, #modal-3-content etc.
+## Features:
+- ✅ Enables dropdowns for submenu items in mobile navigation
+- ✅ Uses lightweight Vanilla JavaScript and CSS
+- ✅ Works out of the box with default FSE navigation structure
+- ✅ Easily customizable for multiple navigation instances
 
-Hope this helps!
+## Installation & Setup
+
+By default, the first navigation modal in FSE is `#modal-1-content`, so the plugin should work immediately. However, if you're using multiple navigation blocks or have deleted and re-added a menu, you may need to update the CSS file to target the correct modal ID (e.g., `#modal-2-content`, `#modal-3-content`).
 
 ![komodo-unlimited-screen-recording-and-sharing1-ezgif com-crop](https://github.com/user-attachments/assets/92e31051-c66d-4693-963b-7e550349894c)
